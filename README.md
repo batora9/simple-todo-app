@@ -4,7 +4,7 @@
 
 ## 使用技術
 
-- サーバーサイド: Node.js(Hono.js)
+- サーバーサイド: Node.js(Hono.js), sqlite3
 - クライアントサイド: HTML, CSS, JavaScript
 
 ## 機能

@@ -9,6 +9,7 @@ const fetchAndDisplayTodoList = async () => {
   todoList.forEach((todo) => {
     // チェックボックスを生成
     const checkbox = document.createElement("input");
+    checkbox.classList.add("checkbox");
     checkbox.type = "checkbox";
     checkbox.checked = todo.completed;
 
@@ -31,9 +32,9 @@ const fetchAndDisplayTodoList = async () => {
 
     // 削除ボタンを生成
     // <button class="delete-button">削除</button>
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "削除";
-    deleteButton.classList.add("delete-button");
+    // svgを使ってアイコンを表示
+    const deleteButton = document.createElement("deleteButton");
+    deleteButton.innerHTML = `<img src="../images/delete.svg" alt="削除" class="delete-button">`;
 
     // 削除ボタンがクリックされたときに、deleteTodo関数を呼び出す
     deleteButton.addEventListener("click", function () {
@@ -46,6 +47,7 @@ const fetchAndDisplayTodoList = async () => {
     //   <button class="delete-button">削除</button>
     // </div>
     const todoElement = document.createElement("div");
+    todoElement.classList.add("task-item");
     todoElement.appendChild(checkbox);
     todoElement.appendChild(textbox);
     todoElement.appendChild(deleteButton);

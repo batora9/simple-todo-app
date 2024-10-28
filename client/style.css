@@ -1,0 +1,114 @@
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px;
+  background-color: #fdfdfd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 70%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-button {
+  width: 10%;
+  height: 10%;
+  margin-left: 8px;
+}
+
+.add-button:hover {
+  cursor: pointer;
+}
+
+.task-container-wrapper {
+  max-width: 70%;
+}
+
+.task-container {
+  padding-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-textbox {
+  width: 100%;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.delete-button {
+  cursor: pointer;
+  width: 120%;
+  height: 120%;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+.todo-title {
+  color: #494949;
+}
+
+.container-title {
+  color: #494949;
+}
+
+.checkbox {
+  appearance: none;
+  /* 丸型 */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #3f8ce4;
+  border-color: #3f8ce4;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.checkbox:hover {
+  border-color: #2a6cb8;
+}
